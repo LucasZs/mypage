@@ -1,0 +1,72 @@
+body {
+	font-family: courier;
+	font-weight: bold;
+	font-size: 1.2em;
+	background-image:url("paper.jpg");
+}
+
+span {
+	color: #FF0000;
+	font-size: 1.7em;
+	text-decoration: underline;
+	text-decoration-style: wavy;
+	text-transform: uppercase; 
+	letter-spacing: 5px;
+}
+
+#kontener {
+	margin: 0 auto;
+	width: 100%;
+}
+
+#fejlec {
+	background-color: none;
+	padding: 10px;
+}
+
+#menu {
+	float: left;
+	width: 100%;
+	background-color: #0c0c0c;
+}
+
+#menu ul li {
+	list-style-type: none;
+	display: inline;
+}
+
+#menu li a {
+	display: block;
+	text-decoration: none;
+	border right: 2px solid #FFFFFF;
+	padding: 3px 10px;
+	float: left;
+	color: #FFFFFF;
+}
+
+#menu li a:hover {
+	background-color: #CCCCCC;
+}
+
+#foKontener {
+	float: left;
+	width: 100%;
+}
+
+#tartalom {
+	clear: left;
+	float: left;
+	width: 65%;
+	padding: 20px 0;
+	margin: 0 0 0 5%;
+	display: inline;
+}
+
+#lablec {
+	clear: left;
+	background-color: none;
+	text-align: center;
+	padding: 20px;
+	height: 1%;
+}
+

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<title>Idõjárás</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+<div id="kontener">
+	<div id="fejlec">
+		<h1>Zsóri Lukács Péter weboldala</h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="index.html">Kezdõlap</a></li>
+			<li><a href="rolam.html">Rólam</a></li>
+			<li><a href="projekt.html">Projektem</a></li>
+			<li><a href="idojaras.html">Idõjárás</a></li>
+		</ul>
+	</div>
+	<div id="foKontener">
+		<div id="tartalom">
+			<div id="tartalom">
+			<h2>Az idõjárás...</h2>
+			<p>...olyan, mint az áremelés: holnap is lesz. Most viszont lássuk a mait:</p>
+			<p id="weather"></p>
+			<!--h2><script type="text/javascript" src="http://addon.koponyeg.hu/addon.js.php?r=4&c=light&s=468x60"> </script></h2>-->
+			<script>
+				function weather(position){
+					var url = "http://api.openweathermap.org/data/2.5/weather?lat="+position.coords.latitude+"&long="+position.coords.longitude+"&appid=39155c4304c62a0a090d15a5a2c60d9";
+					console.log(url);
+					xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function(){
+						console.log(xhttp.responseText);
+					}
+					xhttp.open("GET", url, true);
+					xhttp.send();
+				}
+				if (!navigator.geolocation){
+					document.getElementById("weather").innerHTML = "GELOC ERROR";
+				}
+				else{
+					navigator.geolocation.getCurrentPosition(weather);
+				}
+			</script>
+			
+		</div>
+		<div id="lablec">
+			<p>Elérhetõség:<a href="mailto:zsori.lukacs@gmail.com">zsori.lukacs@gmail.com</a></p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
