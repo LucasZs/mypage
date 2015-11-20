@@ -22,26 +22,13 @@
 			<div id="tartalom">
 			<h2>Az idõjárás...</h2>
 			<p>...olyan, mint az áremelés: holnap is lesz. Most viszont lássuk a mait:</p>
-			<p id="weather"></p>
-			<!--h2><script type="text/javascript" src="http://addon.koponyeg.hu/addon.js.php?r=4&c=light&s=468x60"> </script></h2>-->
-			<script>
-				function weather(position){
-					var url = "http://api.openweathermap.org/data/2.5/weather?lat="+position.coords.latitude+"&long="+position.coords.longitude+"&appid=39155c4304c62a0a090d15a5a2c60d9";
-					console.log(url);
-					xhttp = new XMLHttpRequest();
-					xhttp.onreadystatechange = function(){
-						console.log(xhttp.responseText);
-					}
-					xhttp.open("GET", url, true);
-					xhttp.send();
-				}
-				if (!navigator.geolocation){
-					document.getElementById("weather").innerHTML = "GELOC ERROR";
-				}
-				else{
-					navigator.geolocation.getCurrentPosition(weather);
-				}
-			</script>
+			<p id="weather">
+			<a href="http://www.accuweather.com/hu/us/new-york-ny/10007/weather-forecast/349727" class="aw-widget-legal">
+<!--
+By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
+-->
+</a><div id="awcc1448054776563" class="aw-widget-current"  data-locationkey="" data-unit="c" data-language="hu" data-useip="true" data-uid="awcc1448054776563"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+			</p>
 			
 		</div>
 		<div id="lablec">
